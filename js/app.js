@@ -64,9 +64,6 @@ var Player = function(x,y){
     };
 };
 
-Player.prototype.update = function(){
-//Nothing to update
-};
 
 // Draw the player on the screen, required method for game
 Player.prototype.render = function(){
@@ -97,7 +94,7 @@ Player.prototype.handleInput = function(allowedKey){
 // When the player reach the water, reset his position
 // If the player reach the water 3 times, he win the game and show a pop-up message
 Player.prototype.reachWater = function(){
-        setTimeout(()=>this.resetPosititon(),800); 
+        setTimeout(()=>this.resetPosititon(),300); 
         counter++;
         if(counter==3) 
         {
